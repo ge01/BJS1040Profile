@@ -33,14 +33,19 @@ function lookUpProfile(firstName, prop){
   for (var j=0; j<contacts.length; j++)
   {
   //console.log(contacts[j]);
-    loopTotal += j;
+    //loopTotal += j;
     if (contacts[j].firstName == firstName && contacts[j].hasOwnProperty(prop) === true) {
         //  console.log(contacts[j]);
       return contacts[j][prop];
-    }
-    else if (loopTotal == contacts.length - 1){
-      return "No such contact";
-    }
+    } else if (contacts[j].firstName == firstName && contacts[j].hasOwnProperty(prop) === false) {
+      return "No such property";
+    } //else {
+      //return "No such contact";
+    //}
+
+    //else if (loopTotal == contacts.length - 1){
+      //return "No such contact";
+  //  }
   /*
     else if (contacts[j].firstName != firstName) {
       //console.log(contacts[j]);
@@ -70,7 +75,7 @@ function lookUpProfile(firstName, prop){
 
 
 // Change these values to test your function
-console.log(lookUpProfile("Bob", "likes"));
+console.log(lookUpProfile("Akira", "address"));
 
 
 
