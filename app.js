@@ -11,11 +11,14 @@ var contacts = [
 
 function lookUpProfile(firstName, prop){
 // Only change code below this line
-
+if (contacts[0].firstName == firstName && contacts[0].hasOwnProperty(prop) === true) {
+  console.log(contacts[0].likes);
+}
 // Only change code above this line
 }
 
 // Change these values to test your function
 //lookUpProfile("Akira", "likes");
-var firstNameValue = contacts.firstName;
-console.log(contacts[0].firstName);
+//console.log(contacts[0].firstName);
+console.log(contacts[0]);
+console.log(contacts[0].hasOwnProperty("likes"));
